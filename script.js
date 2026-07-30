@@ -60,6 +60,22 @@ if (newsletterForm) {
 
 const filterButtons = document.querySelectorAll('.filter-btn');
 const collectionCards = document.querySelectorAll('.collection-card');
+const searchInput = document.querySelector('.search-input');
+
+let activeFilter = 'all';
+
+function applyCollectionFilters() {
+    const searchTerm = searchInput ? searchInput.value.trim().toLowerCase() : '';
+
+    collectionCards.forEach((card) => {
+        const matchesFilter = activeFilter === 'all' || card.dataset.category === activeFilter;
+
+        const brandName = card.querySelector('h3').textContent.toLowerCase();
+        const matchesSearch = searchTerm === '' || brandName.includes(searchTerm);
+
+        card.style.display = (matchesFilter && matchesSearch) ? '' : 'none';
+    });
+}
 
 filterButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -67,14 +83,17 @@ filterButtons.forEach((btn) => {
         filterButtons.forEach((b) => b.classList.remove('active'));
         btn.classList.add('active');
 
-        const filter = btn.dataset.filter;
+        activeFilter = btn.dataset.filter;
 
-        collectionCards.forEach((card) => {
-            const matches = filter === 'all' || card.dataset.category === filter;
-            card.style.display = matches ? '' : 'none';
-        });
+        applyCollectionFilters();
     });
 });
+
+if (searchInput) {
+    searchInput.addEventListener('input', () => {
+        applyCollectionFilters();
+    });
+}
 
 
 const urlParams = new URLSearchParams(window.location.search);
