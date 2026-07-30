@@ -94,7 +94,7 @@ body {
     position: relative;
 }
 
-.dropdown>a {
+.dropdown > a {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -522,6 +522,20 @@ body {
 .filter-btn.active {
     background-color: black;
     color: white;
+}
+
+.search-input {
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    font-size: 15px;
+    outline: none;
+    min-width: 220px;
+    transition: 0.3s;
+}
+
+.search-input:focus {
+    border-color: black;
 }
 
 .collections {
