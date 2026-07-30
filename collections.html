@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Nostra</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Offer Bar -->
+    <div class="offer-bar">
+        <p>Sign Up and Get 20% Off Your First Order!</p>
+        <button class="close-btn">&times;</button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <h1 class="logo">Nostra</h1>
+
+        <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="new-arrival.html">New Arrival</a></li>
+            <li><a href="most-wanted.html">Most Wanted</a></li>
+            <li class="dropdown">
+                <a href="collections.html" class="active">Collections <span class="caret">&#9662;</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="collections.html?category=men">Men</a></li>
+                    <li><a href="collections.html?category=women">Women</a></li>
+                    <li><a href="collections.html?category=unisex">Unisex</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <h1>Collections</h1>
+        <p>Shop by brand and discover looks curated just for you.</p>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="men">Men</button>
+        <button class="filter-btn" data-filter="women">Women</button>
+        <button class="filter-btn" data-filter="unisex">Unisex</button>
+    </section>
+
+    <!-- Collections Grid -->
+    <section class="collections">
+
+        <div class="collection-container">
+
+            <div class="collection-card" data-category="men">
+                <img src="./imagecollection/img1.jpg" alt="Nike Collection">
+                <div class="collection-overlay">
+                    <h3>Nike</h3>
+                    <button>View Collection</button>
+                </div>
+            </div>
+
+            <div class="collection-card" data-category="unisex">
+                <img src="./imagecollection/img2.jpg" alt="Adidas Collection">
+                <div class="collection-overlay">
+                    <h3>Adidas</h3>
+                    <button>View Collection</button>
+                </div>
+            </div>
+
+            <div class="collection-card" data-category="men">
+                <img src="./imagecollection/img3.jpg" alt="Puma Collection">
+                <div class="collection-overlay">
+                    <h3>Puma</h3>
+                    <button>View Collection</button>
+                </div>
+            </div>
+
+            <div class="collection-card" data-category="women">
+                <img src="./imagecollection/img4.jpg" alt="Zara Collection">
+                <div class="collection-overlay">
+                    <h3>Zara</h3>
+                    <button>View Collection</button>
+                </div>
+            </div>
+
+            <div class="collection-card" data-category="women">
+                <img src="./imagecollection/img5.jpg" alt="H&M Collection">
+                <div class="collection-overlay">
+                    <h3>H&M</h3>
+                    <button>View Collection</button>
+                </div>
+            </div>
+
+            <div class="collection-card" data-category="unisex">
+                <img src="./imagecollection/img6.jpg" alt="Levi's Collection">
+                <div class="collection-overlay">
+                    <h3>Levi's</h3>
+                    <button>View Collection</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+
+        <h2>Join Our Newsletter</h2>
+
+        <p>
+            Sign up for our newsletter to receive exclusive offers,
+            latest arrivals, and fashion updates.
+        </p>
+
+        <form class="newsletter-form">
+
+            <input type="email" placeholder="Enter your email address" required>
+
+            <button type="submit">Subscribe</button>
+
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <h2>Nostra</h2>
+
+            <p>
+                Discover the latest fashion trends with Nostra.
+                Shop quality clothing, footwear, and accessories
+                at affordable prices.
+            </p>
+
+            <p class="copyright">
+                © 2026 Nostra. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
